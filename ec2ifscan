@@ -41,7 +41,7 @@ fi
 done
 
 logger --tag ec2net "[ec2ifscan] Scanning for unconfigured interfaces"
-for dev in $(find /sys/class/net/eth* /sys/class/net/ens*) ; do
+for dev in $(find /sys/class/net/ens*) ; do
   cfg="/etc/network/interfaces.d/if-${dev##*/}.cfg"
   state=$(cat ${dev}/operstate)
   if [ ! -e "${cfg}" ] && [ "${state}" == "down" ] ; then
