@@ -32,7 +32,7 @@ if [ "${attempts}" -eq 0 ]; then
 fi
 
 if [ ! -f /sys/class/net/eth0/operstate ] || ! grep 'up' /sys/class/net/eth0/operstate; then
-  if [ ! -f /sys/class/net/ens3/operstate ] || ! grep 'up' /sys/class/net/ens3/operstate; then
+  if [ ! -f /sys/class/net/ens5/operstate ] || ! grep 'up' /sys/class/net/ens5/operstate; then
     let attempts--
     sleep 0.5
     false
