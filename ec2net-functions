@@ -38,7 +38,7 @@ if [[ $INTERFACE == eth* ]]; then
     PRIMARY_INTERFACE=eth0
     TYPE=eth
 else
-    PRIMARY_INTERFACE=ens3
+    PRIMARY_INTERFACE=ens5
     TYPE=ens
 fi
 
